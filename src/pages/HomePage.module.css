@@ -1,0 +1,24 @@
+@media (min-width: 767px) {
+
+    .activeLibrary {
+        will-change: auto;
+        margin-left: 20rem;
+        transition: all 0.25s ease-out;
+        z-index: 10;
+    }
+
+    .inactiveLibrary {
+        margin-left: 0;
+        transition: all 0.25s ease-out;
+        z-index: 10;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .activeLibrary {
+        filter: blur(4px);
+    }
+
+}

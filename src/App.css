@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, p, svg {
+    color: var(--main-color-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-color-background);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h3, h4 {
+    font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+
+nav h1 {
+    flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 85%;
+    margin: auto;
+}
+
+button {
+    color: var(--main-color-font);
+    background: transparent;
+    cursor: pointer;
+    padding: 0.6rem;
+    border: 1px solid var(--main-color-font);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--main-color-background);
+    color: var(--main-color-font);
+}
+
+button:hover svg {
+    color: inherit
+}
+
+:root {
+    --main-color-background: rgb(255, 255, 255);
+    --main-color-font: rgb(52, 52, 52);
+    --main-color-selected: rgb(173, 216, 230);
+    --main-color-hover: rgba(173, 216, 230, 0.5);
 }

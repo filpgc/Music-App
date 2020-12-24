@@ -1,0 +1,23 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+    background-color: var(--main-color-background);
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.16);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.25s ease-out, opacity 0.25s linear;
+    margin-bottom: 3rem;
+    overflow: scroll;
+}
+
+.library h2 {
+    padding: 3rem 2rem;
+}
+
+.active {
+    transform: translateX(0%);
+    opacity: 1;
+}
