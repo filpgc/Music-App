@@ -1,4 +1,4 @@
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 
     .activeLibrary {
         will-change: auto;
@@ -15,7 +15,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .activeLibrary {
         filter: blur(4px);
