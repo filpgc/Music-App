@@ -4,7 +4,8 @@
     left: 0;
     width: 20rem;
     height: 100%;
-    background-color: var(--main-color-background);
+    background: var(--main-color-background);
+    background-attachment: fixed;
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.16);
     transform: translateX(-100%);
     opacity: 0;
@@ -21,3 +22,4 @@
     transform: translateX(0%);
     opacity: 1;
 }
+
