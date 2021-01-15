@@ -51,7 +51,7 @@ function HomePage() {
   return (
     <div>
       {currentSong && songs &&
-      <>
+      <main>
         <div className={`${libraryStatus ? styles.activeLibrary : styles.inactiveLibrary}`}>
           <Nav setLibraryStatus={setLibraryStatus}/>
           <Song currentSong={currentSong} isPlaying={isPlaying}/>
@@ -61,7 +61,7 @@ function HomePage() {
         <div ref={wrapperLibraryRef}>
           <Library libraryStatus={libraryStatus} songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong}/>
         </div>
-      </>
+      </main>
       }
     </div>
   );
