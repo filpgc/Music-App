@@ -23,3 +23,10 @@
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+
+    .library {
+        background-size: 250%;
+    }
+
+}
