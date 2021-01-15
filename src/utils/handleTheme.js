@@ -21,6 +21,7 @@ export default function toggleTheme(style) {
       // light theme
       activateThemeStyle(WHITE, GREY, LIGHT_BLUE);
   }
+  localStorage.setItem('theme', style);
 }
 
 

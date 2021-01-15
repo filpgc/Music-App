@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 import Library from "../components/Library/Library";
 import Player from "../components/Player/Player";
 import Song from "../components/Song/Song";
@@ -7,6 +7,7 @@ import {useQuery} from '@apollo/client';
 import {EXCHANGE_SONGS} from "../graphql";
 import {LoadingSpinner} from "../components/LoadingSpinner/LoadingSpinner";
 import * as styles from './HomePage.module.css'
+import toggleTheme from "../utils/handleTheme";
 
 
 function HomePage() {
@@ -44,6 +45,15 @@ function HomePage() {
     window.addEventListener('click', handleClickOutside, false);
     return () => window.removeEventListener('click', handleClickOutside, false);
   }, [libraryStatus])
+
+
+  // handle theme activation at first render
+  useLayoutEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme !== null) {
+      toggleTheme(theme);
+    }
+  }, [])
 
 
   if (loading || !data) return <LoadingSpinner/>
