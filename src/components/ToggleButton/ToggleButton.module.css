@@ -1,0 +1,9 @@
+.isSelected {
+    background-color: var(--main-color-font);
+    color: var(--main-color-background);
+}
+
+.isSelected svg {
+    color: var(--main-color-background);
+}
+

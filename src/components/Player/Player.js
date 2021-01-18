@@ -75,13 +75,6 @@ const Player = ({currentSong, setCurrentSong, songs, setSongs, isPlaying, setIsP
     // eslint-disable-next-line
   }, [currentSong, setSongs])
 
-  useEffect(() => {
-    if (!loading && data) {
-      console.log(data.Songs)
-    }
-
-  }, [loading, data])
-
   return (
     <div className={styles.player}>
       <div className={styles.timeControl}>

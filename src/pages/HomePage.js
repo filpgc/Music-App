@@ -6,8 +6,8 @@ import Nav from "../components/Nav/Nav";
 import {useQuery} from '@apollo/client';
 import {EXCHANGE_SONGS} from "../graphql";
 import {LoadingSpinner} from "../components/LoadingSpinner/LoadingSpinner";
-import * as styles from './HomePage.module.css'
 import toggleTheme from "../utils/handleTheme";
+import * as styles from './HomePage.module.css'
 
 
 function HomePage() {
@@ -63,7 +63,7 @@ function HomePage() {
       {currentSong && songs &&
       <main>
         <div className={`${libraryStatus ? styles.activeLibrary : styles.inactiveLibrary}`}>
-          <Nav setLibraryStatus={setLibraryStatus}/>
+          <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
           <Song currentSong={currentSong} isPlaying={isPlaying}/>
           <Player currentSong={currentSong} setCurrentSong={setCurrentSong} songs={songs} setSongs={setSongs}
                   isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
