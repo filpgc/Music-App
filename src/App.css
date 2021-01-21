@@ -49,6 +49,15 @@ button:hover svg {
     color: inherit
 }
 
+input {
+    border: none;
+    outline: none;
+}
+
+::placeholder {
+    color: var(--main-color-font);
+}
+
 :root {
     --main-color-background: rgb(255, 255, 255);
     --main-color-font: rgb(52, 52, 52);

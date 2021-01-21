@@ -14,8 +14,26 @@
     overflow: scroll;
 }
 
+.inputContainer {
+    width: 100%;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.input {
+    font-size: 1rem;
+    color: var(--main-color-font);
+    background: transparent;
+    border-bottom: 1px solid var(--main-color-font);
+    width: 100%;
+    line-height: 2;
+}
+
 .library h2 {
     padding: 3rem 2rem;
+}
+
+.noResults {
+    padding: 1rem 2rem;
 }
 
 .active {

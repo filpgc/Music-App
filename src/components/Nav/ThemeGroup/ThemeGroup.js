@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faRainbow, faSun} from "@fortawesome/free-solid-svg-icons";
 import {ToggleButton} from "../../ToggleButton/ToogleButton";
 import toggleTheme from "../../../utils/handleTheme";
-import styles from "../Nav.module.css";
+import styles from "./ThemeGroup.module.css";
 
 export function ThemeGroup() {
   const [theme, setTheme] = useState(null);
