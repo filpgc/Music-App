@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleLeft, faAngleRight, faPause, faPlay} from "@fortawesome/free-solid-svg-icons";
 import {gql, useQuery} from "@apollo/client";
+import {addStream} from "../../utils/addStream";
 import * as styles from './Player.module.css';
 
 
@@ -22,11 +23,14 @@ const Player = ({currentSong, setCurrentSong, songs, setSongs, isPlaying, setIsP
   })
 
   const audioRef = useRef(null);
-
+  const registerPlayRef = useRef(0);
   const playSongHandler = () => {
     if (!isPlaying) {
-      audioRef.current.play()
+      audioRef.current.play();
+      //triggers the stream count update only if the user listens to the song for at least 30 seconds
+      registerPlayRef.current = setTimeout(() => addStream(currentSong.id), 30000);
     } else {
+      clearTimeout(registerPlayRef.current);
       audioRef.current.pause();
     }
     setIsPlaying(prevState => !prevState);

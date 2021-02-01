@@ -1,0 +1,5 @@
+{
+  "env": {
+    "VARIABLE_NAME": "REACT_APP_SANITY_API_KEY"
+  }
+}

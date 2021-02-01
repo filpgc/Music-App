@@ -30,6 +30,13 @@
     font-size: 0.7rem;
 }
 
+.songDescription h5 {
+    margin-top: 4px;
+    font-size: 0.6rem;
+    opacity: 0.7;
+}
+
+
 * {
     scrollbar-width: thin;
     scrollbar-color: rgba(155, 155, 155, 0.5) transparent;

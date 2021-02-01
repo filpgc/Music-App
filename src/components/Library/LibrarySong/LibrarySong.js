@@ -16,6 +16,7 @@ const LibrarySong = ({song, songs, setSongs, setCurrentSong}) => {
       <div className={styles.songDescription}>
         <h3>{song.name}</h3>
         <h4>{song.artist}</h4>
+        <h5>{song.streams}</h5>
       </div>
     </div>
   )

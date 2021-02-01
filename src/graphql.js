@@ -6,5 +6,6 @@ export const EXCHANGE_SONGS = gql`{
     name
     artist
     cover
+    streams
   }
 }`
